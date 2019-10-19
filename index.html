@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Any One Can Stick</title>
+    <link href="https://fonts.googleapis.com/css?family=Sacramento|Tangerine|Zhi+Mang+Xing&display=swap"
+     rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Any One Can Stick</h1>
+    </header>
+    <section class="stick">
+        <span id="formToggleBtn"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+    </section>
+    <section class="postForm">
+        <input type="text" name="name" id="name" placeholder="Enter your Name">
+        <textarea name="post" id="post" cols="30" rows="5" placeholder="Enter you content"></textarea>
+        <button id="stickbtn">Stick</button>
+    </section>
+    <section class="board">
+        <div class="stick"></div>
+    </section>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAX9Y-QubHVlfn1RyopGN_3m3nkEVTosgE",
+            authDomain: "trash-b32e7.firebaseapp.com",
+            databaseURL: "https://trash-b32e7.firebaseio.com",
+            projectId: "trash-b32e7",
+            storageBucket: "trash-b32e7.appspot.com",
+            messagingSenderId: "667200309112",
+            appId: "1:667200309112:web:91ed4c3bf1e080e44baa8d",
+            measurementId: "G-E16YWMYFWE"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

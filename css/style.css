@@ -1,0 +1,106 @@
+*{
+    font-family: 'Sacramento', cursive;
+    user-select: none;
+}
+
+header{
+    text-align: center;
+    font-size: 26px;
+}
+section.board{
+    margin: 15px 100px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+section.board .stick{
+    margin: 15px;
+    padding: 15px 30px;
+    padding-top: 32px;
+    font-size: 16px;
+    font-family: cursive;
+    word-break: break-word;
+    max-height: 150px;
+    max-width: 235px;
+    box-shadow: 1px 2px 11px 2px #f3f3f3;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+section.postForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; display: none;
+}
+section.postForm>* {
+    width: 300px;
+    max-width: 300px;
+    margin: 10px 0px;
+    padding: 10px;
+    font-family: cursive;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 41px 8px #eee;
+}
+section.postForm>*:focus {
+    border: 1px dashed #949494;
+}
+
+button#stickbtn {
+    color: #fff;
+    background: #000;
+    width: 115px;
+    transition: 0.5s background ease;
+}
+button#stickbtn:focus,button#stickbtn:hover {
+    border: none;
+    box-shadow: 0px 5px 15px 1px #ccc;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+section.stick {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+section.stick i{
+    background: #E91E63;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease;
+}
+
+section.stick i:focus, section.stick i:hover {
+    box-shadow: 0px 0px 0px 5px #E91E63, 0px 0px 1px 12px #ffb1cb;
+}
+
+section.board .stick::-webkit-scrollbar {
+    width: 3px;
+}
+ 
+section.board .stick::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+section.board .stick::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.show{
+    display: flex !important;
+}
+.hide{
+    display: none !important;
+}
