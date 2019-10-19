@@ -12,7 +12,13 @@ section.board{
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
+    place-items: flex-start;
     justify-content: space-evenly;
+}
+@media screen and (max-width: 767px){
+    section.board{
+        margin: 0px;
+    }
 }
 section.board .stick{
     margin: 15px;
@@ -25,7 +31,27 @@ section.board .stick{
     max-width: 235px;
     box-shadow: 1px 2px 11px 2px #f3f3f3;
     border-radius: 10px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    position: relative;
+}
+section.board .stick .name {
+    position: absolute;
+    top: -6px;
+    right: 0px;
+    background-color: deeppink;
+    color: #fff;
+    font-family: inherit;
+    padding: 5px 20px;
+    z-index: 0;
+}
+section.board .stick .date {
+    position: relative;
+    background-color: #03A9F4;
+    color: #fff;
+    bottom: -15px;
+    left: -31px;
+    padding: 5px 4px;
+    font-family: none;
 }
 
 section.postForm {
@@ -83,6 +109,10 @@ section.stick i{
 
 section.stick i:focus, section.stick i:hover {
     box-shadow: 0px 0px 0px 5px #E91E63, 0px 0px 1px 12px #ffb1cb;
+}
+
+#stickBtn:disabled{
+    cursor: not-allowed;
 }
 
 section.board .stick::-webkit-scrollbar {
