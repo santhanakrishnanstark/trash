@@ -24,11 +24,20 @@ function loadData(){
 }
 
 function createView(obj){
+    // let keys = Object.keys(obj);
+    let ListOfPosts = [];
+    for (var ob in obj){
+        ListOfPosts.push(obj[ob]);
+      }
+      ListOfPosts.sort((a, b) => (new Date(a.date) < new Date(b.date) ? 1 : -1));
+      console.log(ListOfPosts);
+
     let stick='';
-    for(let o in obj){
-       stick += `<div class="stick"><div class="name">${obj[o].username.replace(/[0-9]/g, '')}</div>${obj[o].post} <div class="date">posted on:${obj[o].date.substr(4,11)}</div></div>`;
+    for(let post of ListOfPosts){
+       stick += `<div class="stick"><div class="name">${post.username.replace(/[0-9]/g, '')}</div>${post.post} <div class="date">posted on:${post.date.substr(4,11)}</div></div>`;
     } 
     document.querySelector("#trashBin").innerHTML = stick;
+
     stickBtn.removeAttribute('disabled');
     document.querySelector("#name").value='';
     document.querySelector("#post").value='';

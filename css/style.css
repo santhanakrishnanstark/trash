@@ -36,6 +36,7 @@ section.board .stick{
     border-radius: 10px;
     overflow-y: auto;
     position: relative;
+    user-select: text;
 }
 section.board .stick .name {
     position: absolute;
