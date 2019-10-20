@@ -17,7 +17,8 @@ section.board{
 }
 @media screen and (max-width: 767px){
     section{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: sans-serif;
+        font-size: 16px;
     }
     section.board{
         margin: 0px;
