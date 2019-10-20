@@ -16,6 +16,9 @@ section.board{
     justify-content: space-evenly;
 }
 @media screen and (max-width: 767px){
+    section{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
     section.board{
         margin: 0px;
     }
@@ -133,4 +136,18 @@ section.board .stick::-webkit-scrollbar-thumb {
 }
 .hide{
     display: none !important;
+}
+
+/* Animation part */
+
+section.board .stick{
+    animation: stick 1s ease-out;
+}
+@keyframes stick{
+    from{
+        transform: scale(1.5);
+    }
+    to{
+        transform: scale(1);
+    }
 }
