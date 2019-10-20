@@ -7,6 +7,10 @@ header{
     text-align: center;
     font-size: 26px;
 }
+header p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
 section.board{
     margin: 15px 100px;
     padding: 30px;
@@ -118,6 +122,8 @@ section.stick i{
 
 section.stick i:focus, section.stick i:hover {
     box-shadow: 0px 0px 0px 5px #E91E63, 0px 0px 1px 12px #ffb1cb;
+    outline: none;
+    user-select: none;
 }
 
 #stickBtn:disabled{
